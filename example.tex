@@ -1,0 +1,156 @@
+%!TEX program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+% Fill in:
+%   - details of thesis, author and defence
+%   - details of doctoral committee
+
+\documentclass{abe}
+
+% Details of thesis, author and defence
+\abethesistitle{Thesis title}
+\abethesissubtitle{Thesis subtitle}
+
+\abeauthortitle{Title}
+\abeauthorname{First name}
+\abeauthorsurname{Last name}
+\abeauthordepartment{Department}
+\abeauthorplaceofbirth{Place of birth (Country if born abroad)}
+
+\abedefencedate{Defence date}
+\abedefencetime{Defence time}
+
+\begin{document}
+
+\frontmatter
+
+\cleardoublepage%
+\noindent
+\begin{flushleft}
+{\Huge \abethesisthetitle}\\\vspace{13pt}
+{\LARGE\bfseries \abethesisthesubtitle}\\\vspace{13pt}
+\vspace{39pt}{\abeauthorthename\ \abeauthorthesurname}\\
+{\itshape%
+Delft University of Technology, Faculty of Architecture and the Built Environment,\\Department of \abeauthorthedepartment\/}
+\end{flushleft}
+
+\cleardoublepage%
+\begin{center}
+{\Huge \abethesisthetitle}\\\vspace{13pt}
+{\LARGE\bfseries \abethesisthesubtitle}\\\vspace{13pt}
+\vfill
+Proefschrift\\
+\medskip
+{ter verkrijging van de graad van doctor \\
+aan de Technische Universiteit Delft, \\
+op gezag van de Rector Magnificus prof.~ir.~K.~C.~A.~M.~Luyben, \\
+voorzitter van het College voor Promoties, \\
+in het openbaar te verdedigen op \abedefencethedate\ om \abedefencethetime\ uur \\
+door \abeauthorthename\ \MakeUppercase{\abeauthorthesurname} \\
+\abeauthorthetitle\\
+geboren te \abeauthortheplaceofbirth%
+}
+\end{center}
+
+% Details of doctoral committee
+\clearpage%
+\begin{flushleft}
+{\bfseries\large Dit proefschrift is goedgekeurd door de}\\
+\vspace{-2mm}\abeblackrule\\
+\vspace{6.5pt}promotorEN: TITLE INITIALS SURNAME en TITLE INITIALS SURNAME\\
+copromotorEN: TITLE INITIALS SURNAME en TITLE INITIALS SURNAME\\
+\vspace{26pt}{\bfseries\large Samenstelling promotiecommissie bestaat uit}\\
+\vspace{-2mm}\abeblackrule\\
+\vspace{6.5pt}
+\begin{tabularx}{\textwidth}{@{}XX@{}}
+Rector Magnificus, & voorzitter \\
+TITLE INITIALS SURNAME, & promotor \\
+TITLE INITIALS SURNAME, & promotor \\
+TITLE INITIALS SURNAME, & copromotor \\
+TITLE INITIALS SURNAME, & copromotor \\
+\end{tabularx}\\
+\vspace{26pt}{\bfseries\large Onafhankelijke leden}\\
+\vspace{-2mm}\abeblackrule\\
+\vspace{6.5pt}
+\begin{tabularx}{\textwidth}{@{}XX@{}}
+TITLE INITIALS SURNAME, & FACULTY, TU Delft \\
+TITLE INITIALS SURNAME, & UNIVERSITY \\
+TITLE INITIALS SURNAME, & UNIVERSITY \\
+TITLE INITIALS SURNAME, & UNIVERSITY \\
+TITLE INITIALS SURNAME, & UNIVERSITY, reservelid \\
+\end{tabularx}
+\end{flushleft}
+
+\tableofcontents
+
+\chapter{Preface}
+
+Suspendisse at tincidunt dui. Etiam elementum pretium consequat. Donec tempus eros eu ex imperdiet, sit amet aliquam lorem mollis. Pellentesque turpis ex, ultricies vel laoreet et, tempus at purus. Aenean nec sapien ac elit euismod efficitur. Aenean at hendrerit ante. Aliquam in cursus orci, a rhoncus purus. Duis quis elit in dolor pellentesque luctus et id nibh. Pellentesque id leo eget felis ullamcorper hendrerit. Etiam luctus nibh in maximus euismod. Vivamus tincidunt maximus tellus. Etiam ut cursus lorem. Phasellus porta eu dolor aliquam ultrices. Proin fermentum sagittis urna, nec malesuada dolor tincidunt vel.
+
+Integer viverra venenatis ullamcorper. In magna erat, finibus a tincidunt id, elementum a erat. Donec eu tellus a ante interdum consectetur. Aenean eget tincidunt sapien. Vestibulum at fermentum ex. Quisque vestibulum odio id ex ultricies viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam venenatis maximus lacus in pretium. Vivamus et ex eget quam mattis dapibus. Aliquam eget urna porta, aliquam ligula quis, hendrerit lorem. Nam luctus, ipsum vel viverra eleifend, quam felis porta ante, vitae sollicitudin tortor sem eget augue.
+
+\mainmatter%
+
+\chapter{A chapter}
+\section{A section}
+\subsection{A subsection}
+\subsubsection{A subsubsection}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum turpis turpis, eleifend a nulla et, tincidunt hendrerit nisl. Quisque consequat nulla ut massa malesuada facilisis. Maecenas id euismod nisi. Vivamus a tempor urna. Praesent efficitur, ipsum quis scelerisque facilisis, ligula dui efficitur sem, eu finibus enim sem ut felis. Phasellus vitae viverra orci, eu sollicitudin enim. Nulla vitae dolor a est mollis malesuada a sit amet urna. Suspendisse non tortor felis. Nulla fringilla congue felis, eget feugiat eros rutrum in. Donec dictum lorem eu nisi commodo, sit amet finibus risus tempor. Praesent nec dictum ipsum. Duis pretium est et cursus eleifend. Mauris pharetra vel felis ut facilisis as shown in Figure~\ref{fig:test} and Table~\ref{table:test}.
+
+\begin{figure}[htbp]
+\rule{2cm}{2cm}
+\caption{Test figure}
+\label{fig:test}
+\end{figure}
+
+\begin{table}[htbp]
+\caption{Test table}
+\label{table:test}
+\begin{tabular}{ll}
+Foo & bar \\
+1 & 2 \\
+\end{tabular}
+\end{table}
+
+In semper tortor risus, at convallis erat sollicitudin nec. Nam sapien elit, posuere sit amet lorem vitae, aliquet egestas lectus. Fusce at finibus mi, volutpat convallis tellus. Vivamus feugiat dui eu est pulvinar eleifend. Nullam vitae lectus iaculis, ornare mi eu, vehicula ex. Integer pretium eleifend nulla, vel rhoncus justo lobortis sit amet. Donec aliquam eu velit non bibendum. Integer ligula mi, posuere quis semper a, congue sit amet ipsum\footnote{Phasellus vestibulum, mi in placerat dignissim, est purus laoreet purus, eu porttitor massa arcu in magna. Cras efficitur metus eleifend ante feugiat consectetur. Praesent nulla ipsum, egestas eu tempor nec, scelerisque vitae dolor. Proin rutrum in mi eu luctus. In hac habitasse platea dictumst.}.
+
+Vestibulum euismod, quam sed scelerisque ornare, nisl justo congue nibh, vitae rhoncus erat neque vitae mauris. Ut vestibulum turpis a arcu accumsan, in pellentesque lorem aliquam. Curabitur sit amet sapien non nisi condimentum varius. Sed eu libero sed augue malesuada tristique sit amet et elit. Sed ut est eu risus tristique sagittis vel ac est. Morbi tristique convallis auctor. Proin non ligula et est cursus gravida id eget magna. Nulla sit amet felis id velit pretium dictum nec vel lectus. Pellentesque accumsan arcu vel eros hendrerit sollicitudin. 
+
+\subsubsection{Another subsubsection}
+Nunc consequat leo ut ex dignissim dignissim. Proin sit amet efficitur metus. Sed a porttitor ex, eu finibus sem. Nullam nec nunc tincidunt ipsum commodo aliquam eget at arcu. Integer ut volutpat dui, vitae malesuada tellus. Integer laoreet ipsum eu urna tincidunt, id venenatis augue semper. Curabitur consectetur mi ac turpis aliquam tincidunt. Fusce ultrices arcu vitae iaculis porta. Vivamus in magna eros. Donec semper ut mi at lacinia.
+
+\begin{itemize}
+\item An item
+\item Another item
+\item Yet another item
+\end{itemize}
+
+Proin neque lorem, rhoncus non nisl id, aliquet dapibus turpis. Nam tempor felis eget ex cursus aliquam. Donec ut justo ligula. Suspendisse laoreet felis et enim convallis, sit amet pharetra metus lacinia. Pellentesque ac odio viverra, aliquet libero id, tempus sapien. Cras arcu nisl, hendrerit et mi non, varius tincidunt justo. In luctus posuere mauris sit amet porttitor. Fusce sed ipsum aliquam, accumsan ipsum quis, hendrerit augue. Quisque vitae erat lectus.
+
+\begin{enumerate}
+\item An item
+\item Another item
+\item Yet another item
+\end{enumerate}
+
+Morbi ornare mattis malesuada. Curabitur vestibulum mattis mauris. Donec egestas suscipit condimentum. In in eleifend lacus. Quisque sollicitudin dolor ut sagittis facilisis. Cras convallis interdum lectus, at ultrices elit facilisis a. Fusce porta tortor varius leo gravida elementum. Mauris felis tellus, mattis eu pulvinar in, iaculis in nibh. Cras aliquam id risus eu condimentum.
+
+\subsubsection{Yet another subsubsection}
+\subsection{Another subsection}
+\subsection{Yet another subsection}
+\section{Another section}
+\section{Yet another section}
+
+\chapter{Another chapter}
+\section{A section}
+\section{Another section}
+\section{Yet another section}
+
+\chapter{Yet another chapter}
+\section{A section}
+\section{Another section}
+\section{Yet another section}
+
+\backmatter%
+ 
+\end{document} 

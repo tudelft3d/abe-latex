@@ -116,45 +116,78 @@
 
 % New section command
 \let\LaTeXStandardSection\section%
-\renewcommand{\section}[1]{%
-\begingroup % Limit the renewcommand of \thesection
-\renewcommand{\thesection}{}%  
-\refstepcounter{section}%
-\addcontentsline{toc}{section}{\protect{\numberline{\color{abecolor}\thechapter.\arabic{section}\thesection}{#1}}}
+\makeatletter
+\renewcommand{\section}{%
+\@ifstar{\abestarredsection}{\abeunstarredsection}%
+}%
+\makeatother
+
+\newcommand{\abestarredsection}[1]{
+\addcontentsline{toc}{section}{\protect{\numberline{}{#1}}}
 \LaTeXStandardSection*{\nopagebreak\aberule\\%
-\makebox[0pt][r]{\color{abecolor}\bfseries\Large\S\enskip\thechapter.\arabic{section}\hspace{13pt}}{\bfseries\Large #1}\\%
+{\bfseries\large #1}\\%
 \vspace{-2mm}\aberule\\%
 }%
-\endgroup
+}
+
+\newcommand{\abeunstarredsection}[1]{
+\refstepcounter{section}%
+\addcontentsline{toc}{section}{\protect{\numberline{\color{abecolor}\thesection}{#1}}}
+\LaTeXStandardSection*{\nopagebreak\aberule\\%
+\makebox[0pt][r]{\color{abecolor}\bfseries\large\S\enskip\thechapter.\arabic{section}\hspace{13pt}}{\bfseries\large #1}\\%
+\vspace{-2mm}\aberule\\%
 }%
+}
 
 % New subsection command
 \let\LaTeXStandardSection\subsection%
-\renewcommand{\subsection}[1]{%
-\begingroup % Limit the renewcommand of \thesubsection
-\renewcommand{\thesubsection}{}%  
+\makeatletter
+\renewcommand{\subsection}{%
+\@ifstar{\abestarredsubsection}{\abeunstarredsubsection}%
+}%
+\makeatother
+
+\newcommand{\abestarredsubsection}[1]{
+\addcontentsline{toc}{subsection}{\protect{\numberline{}{#1}}}
+\LaTeXStandardSection*{\nopagebreak%
+{\bfseries\large #1}\\%
+\vspace{-2mm}\aberule\\%
+}%
+}
+
+\newcommand{\abeunstarredsubsection}[1]{
 \refstepcounter{subsection}%
-\addcontentsline{toc}{subsection}{\protect{\numberline{\color{abecolor}\thechapter.\arabic{section}.\arabic{subsection}\thesubsection}{#1}}}
+\addcontentsline{toc}{subsection}{\protect{\numberline{\color{abecolor}\thesubsection}{#1}}}
 \LaTeXStandardSection*{\nopagebreak%
 \makebox[0pt][r]{\color{abecolor}\bfseries\large\S\enskip\thechapter.\arabic{section}.\arabic{subsection}\hspace{13pt}}{\bfseries\large #1}\\%
 \vspace{-2mm}\aberule\\%
 }%
-\endgroup
-}%
+}
 
 % New subsubsection command
 \let\LaTeXStandardSection\subsubsection%
-\renewcommand{\subsubsection}[1]{%
-\begingroup % Limit the renewcommand of \thesubsubsection
-\renewcommand{\thesubsubsection}{}%  
+\makeatletter
+\renewcommand{\subsubsection}{%
+\@ifstar{\abestarredsubsubsection}{\abeunstarredsubsubsection}%
+}%
+\makeatother
+
+\newcommand{\abestarredsubsubsection}[1]{
+\addcontentsline{toc}{subsubsection}{\protect{\numberline{}{#1}}}
+\LaTeXStandardSection*{\nopagebreak%
+{\bfseries\large #1}\\%
+\vspace{-2mm}\abeblackrule\\%
+}%
+}
+
+\newcommand{\abeunstarredsubsubsection}[1]{
 \refstepcounter{subsubsection}%
-\addcontentsline{toc}{subsubsection}{\protect{\numberline{\thesubsubsection}{#1}}}
+\addcontentsline{toc}{subsubsection}{\protect{\numberline{\color{abecolor}\thesubsubsection}{#1}}}
 \LaTeXStandardSection*{\nopagebreak%
 \makebox[0pt][r]{\color{abecolor}\bfseries\large\S\enskip\thechapter.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}\hspace{13pt}}{\bfseries\large #1}\\%
 \vspace{-2mm}\abeblackrule\\%
 }%
-\endgroup
-}%
+}
 
 % Set up table of contents
 \newlength{\abenumlen}

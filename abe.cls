@@ -37,6 +37,7 @@
 \RequirePackage[english]{babel}
 \RequirePackage{xcolor}
 \RequirePackage[singlelinecheck=false]{caption}
+\RequirePackage{natbib}
 \RequirePackage[xetex,
                 breaklinks]{hyperref}
 

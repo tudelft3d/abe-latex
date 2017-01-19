@@ -190,6 +190,14 @@
 }%
 }
 
+% New paragraph command
+\let\LaTeXStandardSection\paragraph%
+\renewcommand{\paragraph}[1]{%
+\LaTeXStandardSection*{\nopagebreak%
+\normalfont\normalsize\color{abecolor}\uppercase{#1}
+}%
+}%
+
 % Set up table of contents
 \newlength{\abenumlen}
 \setlength{\abenumlen}{1.5cm}

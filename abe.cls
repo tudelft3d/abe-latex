@@ -61,8 +61,8 @@
   {}%
   {}
 }{
-  {\makebox[0pt][r]{\color{abecolor}\footnotesize\pagemark\hspace{13pt}}{\footnotesize\upshape\bfseries\abethesisthetitle}}%
-  {\makebox[0pt][r]{\color{abecolor}\footnotesize\pagemark\hspace{13pt}}{\footnotesize\upshape\bfseries\leftmark}}%
+  {\makebox[0pt][r]{\color{abecolor}\footnotesize\hspace{13pt}}{\footnotesize\upshape\bfseries\abethesisthetitle}\hfill\pagemark}%
+  {\makebox[0pt][r]{\color{abecolor}\footnotesize\hspace{13pt}}{\footnotesize\upshape\bfseries\chaptername{}}\hfill\pagemark}%
   {}
 }
 
@@ -124,7 +124,7 @@
 \makeatother
 
 \newcommand{\abestarredsection}[1]{
-\addcontentsline{toc}{section}{\protect{\numberline{}{#1}}}
+%\addcontentsline{toc}{section}{\protect{\numberline{}{#1}}}
 \LaTeXStandardSection*{\nopagebreak\aberule\\%
 {\bfseries\large #1}\\%
 \vspace{-2mm}\aberule\\%
@@ -149,7 +149,7 @@
 \makeatother
 
 \newcommand{\abestarredsubsection}[1]{
-\addcontentsline{toc}{subsection}{\protect{\numberline{}{#1}}}
+%\addcontentsline{toc}{subsection}{\protect{\numberline{}{#1}}}
 \LaTeXStandardSection*{\nopagebreak%
 {\bfseries\large #1}\\%
 \vspace{-2mm}\aberule\\%
@@ -233,7 +233,7 @@
 \renewcommand{\cftsecaftersnum}{\hspace*{\abeafternumlen}}
 \renewcommand{\cftsecleader}{}
 \renewcommand{\cftsecpagefont}{\color{abecolor}\scshape}
-\renewcommand{\cftsecafterpnum}{\\\vspace{-3.25pt}\hspace{-\abenumlen}\aberule}
+\renewcommand{\cftsecafterpnum}{\\\vspace{-3.25pt}\hspace{-\abenumlen}}
 
 \setlength{\cftsubsecindent}{0pt}
 \setlength{\cftsubsecnumwidth}{\abenumlen}
